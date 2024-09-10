@@ -1,4 +1,0 @@
-Hey, this is my second time
-learning GIT
-
-Hello there! What's up??
