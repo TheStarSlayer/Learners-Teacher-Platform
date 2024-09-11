@@ -1,0 +1,60 @@
+.take-attendance {
+    margin-top: 30px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.attendance-inputs {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    column-gap: 20px;
+}
+
+.attendance-inputs select {
+    width: 20%;
+    padding: 5px;
+    border-radius: 4px;
+    border: 2px solid black;
+}
+
+.attendance-inputs button {
+    width: 10%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #333;
+    color: white;
+    transition: padding 0.5s, width 0.5s;
+    cursor: pointer;
+}
+
+.attendance-inputs button:disabled:hover {
+    cursor: not-allowed;
+}
+
+.attendance-inputs button:hover {
+    width: 12%;
+    padding: 10px 20px;
+}
+
+.post-inputs select, .post-inputs input {
+    border-radius: 4px;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+.post-inputs input[type="file"] {
+    border: none;
+}
+
+.textbox {
+    width: 80%;
+    height: 100px;
+    font-family: 'Arial';
+    padding-top: 5px;
+    padding-left: 5px;
+    border-radius: 4px;
+    border: 2px solid black;
+}
