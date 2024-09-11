@@ -20,9 +20,16 @@
 
 .nav-link {
     background-color: aliceblue;
+    border: none;
     padding: 12px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    cursor: pointer;
+    transition: border 0.05s;
+}
+
+.nav-link:hover {
+    border: 3px outset rgb(248, 248, 171);
 }
 
 .user-details {
