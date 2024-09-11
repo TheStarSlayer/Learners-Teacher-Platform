@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Welcome Teacher</title>
+        <style>
+            body {
+                display: grid;
+                grid-template-rows: 1fr 7fr;
+                background-image: url(static/img/sakura.webp);
+                background-repeat: repeat;
+            }
+        </style>
+        <link rel="stylesheet" href="static/css/header.css">
+        <link rel="stylesheet" href="static/css/main.css">
+    </head>
+
+    <body>
+        <div class="header">
+
+            <div class="logo-container">
+                <img class="logo" src="static/img/Header.png" alt="AULTP Logo">
+            </div>
+            
+            <span class="heading">
+                Learner-Teacher-Platform Portal
+            </span>
+
+            <div class="links">
+                <form action="login.html">
+                    <input type="submit" value="Logout" class="header-button">
+                </form>
+
+                <form target="_blank" action="https://andhrauniversity.edu.in">
+                    <input type="submit" value="A.U. Website" class="header-button">
+                </form>
+                
+                <form target="_blank" action="https://results.andhrauniversity.edu.in/">
+                    <input type="submit" value="EMS Website" class="header-button">
+                </form>
+
+                <button class="header-button" onClick="darkMode()">
+                    Dark Mode
+                </button>
+
+            </div>
+        </div>
+
+        <div class="main">
+
+            <div class="navbar">
+                <button class="nav-link" style="border: 4px inset bisque">
+                Dashboard
+                </button>
+            </div>
+
+            <div class="user-details">
+                <div class="user-info">
+                    <h1>Welcome Teacher</h1>
+                    <br />
+                    <p>This section contains info about the teacher</p>
+                    <br />
+                    <p>Faculty number: fno</p>
+                </div>
+                <div class="user-picture">
+                    <img class="pfp" src="static/img/spiderman.jpg" alt="Student">
+                </div>
+            </div>
+                
+            <div class="user-links">
+                <button class="main-button">Take Attendance</button>
+                <button class="main-button">Post on Class Walls</button>
+                <button class="main-button">View your class's statistics</button>
+                <button class="main-button">Post mid-term marks</button>
+                <button class="main-button">Post assignment marks</button>
+                <button class="main-button">View your timetable</button>
+            </div>
+        </div>
+
+    </body>
+</html>
