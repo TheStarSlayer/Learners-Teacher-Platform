@@ -1,0 +1,38 @@
+.post-on-wall {
+    margin-top: 30px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.post-inputs {
+    display: grid;
+    grid-template-columns: 15% 75%;
+    column-gap: 20px;
+}
+
+.post-inputs select, .post-inputs input {
+    border-radius: 4px;
+    padding: 5px;
+    border: 2px solid black;
+    width: 25%;
+}
+
+.post-inputs input[type="file"] {
+    border: none;
+}
+
+.post-inputs input[type="text"] {
+    width: 80%;
+}
+
+.textbox {
+    width: 80%;
+    height: 100px;
+    font-family: 'Arial';
+    padding-top: 5px;
+    padding-left: 5px;
+    border-radius: 4px;
+    border: 2px solid black;
+}

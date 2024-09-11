@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Post on Wall</title>
+        <style>
+            body {
+                display: grid;
+                grid-template-rows: 1fr 7fr;
+                background-image: url(static/img/sakura.webp);
+                background-repeat: repeat;
+            }
+        </style>
+        <link rel="stylesheet" href="static/css/header.css">
+        <link rel="stylesheet" href="static/css/main.css">
+        <link rel="stylesheet" href="static/css/post-on-wall.css">
+    </head>
+
+    <body>
+        <div class="header">
+
+            <div class="logo-container">
+                <img class="logo" src="static/img/Header.png" alt="AULTP Logo">
+            </div>
+            
+            <span class="heading">
+                Learner-Teacher-Platform Portal
+            </span>
+
+            <div class="links">
+                <form action="login.html">
+                    <input type="submit" value="Logout" class="header-button">
+                </form>
+
+                <form target="_blank" action="https://andhrauniversity.edu.in">
+                    <input type="submit" value="A.U. Website" class="header-button">
+                </form>
+                
+                <form target="_blank" action="https://results.andhrauniversity.edu.in/">
+                    <input type="submit" value="EMS Website" class="header-button">
+                </form>
+
+                <button class="header-button" onClick="darkMode()">
+                    Dark Mode
+                </button>
+
+            </div>
+        </div>
+
+        <div class="main">
+
+            <div class="navbar">
+                <a href="welcome-teacher.html"><button class="nav-link">
+                    Dashboard
+                </button></a>
+                <button class="nav-link">Class Wall</button>
+            </div>
+
+            <div class="post-on-wall">
+                <h1>Post on Wall</h1>
+                <!-- Include action later -->
+                <form action="" method="POST">
+
+                    <div class="post-inputs">
+                        <label for="select-class">Select class:&nbsp;&nbsp;</label>
+                        <select name="select-class" id="select-class">
+                            <option value="">Select Class</option>
+                            <option value="*">All</option>
+                            <option value="III-CSE4">III-CSE4</option>
+                            <option value="III-CSE6">III-CSE6</option>
+                        </select>
+                    </div>
+                    
+                    <br/>
+
+                    <div class="post-inputs">
+                        <label for="class-post">Type of post:&nbsp;&nbsp;</label>
+                        <select name="class-post" id="class-post">
+                            <option value="emergency">Emergency</option>
+                            <option value="announcement">Announcement/General</option>
+                            <option value="exams">Exam related</option>
+                        </select>
+                    </div>
+                    <br />
+                    <div class="post-inputs">
+                        <label for="post-heading">What's the subject? </label>
+                        <input type="text" name="post-heading" id="post-heading" placeholder="Enter subject" required>
+                    </div>
+                    <br />
+                    <div class="post-inputs">
+                        <label for="post-content">What's the content? </label>
+                        <textarea class="textbox" name="post-content" id="post-content" placeholder="Enter content of post" required></textarea>
+                    </div>
+                    <br />
+                    <div class="post-inputs">
+                        <label for="post-file">Attach a file: </label>
+                        <input type="file" name="post-file" id="post-file">
+                    </div>
+                    <br />
+                    <div style="margin-top: 30px;">
+                        <input type="submit" value="Post" class="main-button">
+                    </div>
+                </form>
+            </div>
+
+    </body>
+</html>
