@@ -14,11 +14,11 @@ exam dates, assignments due, mid marks and so on...
 
 ## Pages to develop: (as of 11/09/2024)
 * ~~Take attendance~~
-* ~~File attendance~~
-* View timetable
-* Post on Class Wall
+* File attendance
+* ~~Post on Class Wall~~
 * Post mid-term marks
 * Post assignment marks
+* View timetable
 * View class statistics
 * View attendance
 * View marks
