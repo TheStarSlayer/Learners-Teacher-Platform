@@ -30,7 +30,7 @@
     cursor: pointer;
 }
 
-.attendance-inputs button:disabled:hover {
+.attendance-inputs button:disabled:hover, input[type=submit]:disabled:hover {
     cursor: not-allowed;
 }
 
