@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>File attendance</title>
+        <style>
+            body {
+                display: grid;
+                grid-template-rows: 1fr 7fr;
+                background-image: url(static/img/sakura.webp);
+                background-repeat: repeat;
+            }
+        </style>
+        <link rel="stylesheet" href="static/css/header.css">
+        <link rel="stylesheet" href="static/css/main.css">
+        <link rel="stylesheet" href="static/css/attendance.css">
+    </head>
+
+    <body>
+        <div class="header">
+
+            <div class="logo-container">
+                <img class="logo" src="static/img/Header.png" alt="AULTP Logo">
+            </div>
+            
+            <span class="heading">
+                Learner-Teacher-Platform Portal
+            </span>
+
+            <div class="links">
+                <form action="login.html">
+                    <input type="submit" value="Logout" class="header-button">
+                </form>
+
+                <form target="_blank" action="https://andhrauniversity.edu.in">
+                    <input type="submit" value="A.U. Website" class="header-button">
+                </form>
+                
+                <form target="_blank" action="https://results.andhrauniversity.edu.in/">
+                    <input type="submit" value="EMS Website" class="header-button">
+                </form>
+
+                <button class="header-button" onClick="darkMode()">
+                    Dark Mode
+                </button>
+
+            </div>
+        </div>
+
+        <div class="main">
+
+            <div class="navbar">
+                <a href="welcome-lrn.html"><button class="nav-link">
+                    Dashboard
+                </button></a>
+                <button class="nav-link">Class Wall</button>
+            </div>
+
+            <div class="take-attendance">
+
+                <h1>File attendance</h1>
+
+                <!-- Include action later -->
+                <form action="" method="POST">
+
+                    <div class="attendance-inputs">
+                        <label for="period">Period: </label>
+                        <select name="period" id="period">
+                            <option value="">Select Period</option>
+                            <option value="CS08">DWDM</option>
+                            <option value="CS09">SS</option>
+                            <option value="CS10">DCCN Lab</option>
+                            <option value="CS11">PP Lab</option>
+                        </select>
+                    </div>
+
+                    <br/>
+
+                    <div class="attendance-inputs">
+                        <label for="fetch-location">Fetch location: </label>
+                        <button id="fetch-location" onClick="fetchLocation(event);">Fetch</button>
+                    </div>
+
+                    <br/>
+
+                    <span id="fetch-msg" style="color: green; display: none;">
+                        Fetched and validated location successfully
+                    </span>
+                    
+                    <br/><br/>
+
+                    <script>
+                        function fetchLocation(event) {
+                            event.preventDefault();
+                            document.getElementById('fetch-msg').style.display = 'block';
+                    
+                            document.getElementById('allow-attendance').disabled = false;
+                        }
+                    </script>
+
+                    <div class="attendance-inputs">
+                        <label for="passkey">Enter passkey: </label>
+
+                        <div style="display: inline-block;">
+                            <input type="textbox" name="passkey" id="passkey" style="padding: 10px;" placeholder="Enter passkey">
+                            &nbsp;&nbsp;
+                            <button id="allow-attendance" onClick="validatePasskey(event);" disabled>Ok</button>
+                        </div>
+
+                    </div>
+                    <br />
+
+                    <span id="generate-msg" style="color: green; display: none;">Passkey validated successfully</span>
+
+                    <br/><br/>
+
+                    <div id="facial-reg" style="display: none;">
+                        <div class="attendance-inputs">
+                            <label for="face-rec">Facial recognition: </label>
+                            <video id="face-rec" name="face-rec" autoplay></video>
+
+                            <script>
+                                navigator.mediaDevices
+                                .getUserMedia({ video: true })
+                                .then((localMediaStream) => {
+                                const video = document.querySelector("video");
+                                video.srcObject = localMediaStream;
+                                })
+                                .catch((error) => {
+                                console.log("Rejected!", error);
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                    <script>
+                        function validatePasskey(event) {
+                            event.preventDefault();
+                            document.getElementById('generate-msg').style.display = 'block';
+                            document.getElementById('facial-reg').style.display = 'block';
+                            document.getElementById('file-attendance').disabled = false;
+                        }
+                    </script>
+                    
+                    <br/>
+
+                    <div style="margin-top: 30px;">
+                        <input type="submit" id="file-attendance" value="File attendance" class="main-button" disabled>
+                    </div>
+                    
+                </form>
+            </div>
+
+    </body>
+</html>
