@@ -9,7 +9,7 @@
 .post-inputs {
     display: grid;
     grid-template-columns: 15% 75%;
-    column-gap: 20px;
+    column-gap: 40px;
 }
 
 .post-inputs select, .post-inputs input {
@@ -25,14 +25,15 @@
 
 .post-inputs input[type="text"] {
     width: 80%;
+    padding: 10px;
 }
 
 .textbox {
     width: 80%;
     height: 100px;
     font-family: 'Arial';
-    padding-top: 5px;
-    padding-left: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
     border-radius: 4px;
     border: 2px solid black;
 }
