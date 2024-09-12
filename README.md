@@ -12,9 +12,9 @@ informations freely.
 * Social wall exclusive to each class, to share info. such as
 exam dates, assignments due, mid marks and so on...
 
-## Pages to develop: (as of 11/09/2024)
+## Pages to develop: (as of 12/09/2024)
 * ~~Take attendance~~
-* File attendance
+* ~~File attendance~~
 * ~~Post on Class Wall~~
 * Post mid-term marks
 * Post assignment marks
