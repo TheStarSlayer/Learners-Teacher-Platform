@@ -39,16 +39,6 @@
     padding: 10px 20px;
 }
 
-.post-inputs select, .post-inputs input {
-    border-radius: 4px;
-    padding: 5px;
-    border: 2px solid black;
-}
-
-.post-inputs input[type="file"] {
-    border: none;
-}
-
 .textbox {
     width: 80%;
     height: 100px;
