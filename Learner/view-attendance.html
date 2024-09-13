@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Welcome Student</title>
+        <style>
+            body {
+                display: grid;
+                grid-template-rows: 1fr 7fr;
+                background-image: url(../static/img/sakura.webp);
+                background-repeat: repeat;
+            }
+        </style>
+        <link rel="stylesheet" href="../static/css/header.css">
+        <link rel="stylesheet" href="../static/css/main.css">
+        <link rel="stylesheet" href="../static/css/time-table.css">
+    </head>
+
+    <body>
+        <div class="header">
+
+            <div class="logo-container">
+                <img class="logo" src="../static/img/Header.png" alt="AULTP Logo">
+            </div>
+            
+            <span class="heading">
+                Learner-Teacher-Platform Portal
+            </span>
+
+            <div class="links">
+                <form action="login.html">
+                    <input type="submit" value="Logout" class="header-button">
+                </form>
+
+                <form target="_blank" action="https://andhrauniversity.edu.in">
+                    <input type="submit" value="A.U. Website" class="header-button">
+                </form>
+                
+                <form target="_blank" action="https://results.andhrauniversity.edu.in/">
+                    <input type="submit" value="EMS Website" class="header-button">
+                </form>
+
+                <button class="header-button" onClick="darkMode()">
+                    Dark Mode
+                </button>
+
+            </div>
+        </div>
+
+        <div class="main">
+
+            <div class="navbar">
+                <a href="welcome-lrn.html"><button class="nav-link">
+                    Dashboard
+                </button></a>
+                <a href="class-wall.html"><button class="nav-link">
+                    Class Wall
+                </button></a>
+            </div>
+
+            <br />
+            <h1>Your Attendance Summary</h1>
+            <br />
+
+            <div class="total-attendance">
+                <h2>Total Attendance</h2>
+                <h2 style="color: green">85%</h2>
+            </div>
+
+            <div class="time-table" style="padding-bottom: 40px;">
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Hours Attended</th>
+                            <th>Total Hours</th>
+                            <th>Attendance Percentage</th>
+                        </tr>
+                        <tr>
+                            <td>Data Warehouse & Data Mining</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>Python Programming</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>Data Communication & Computer Networks</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>Compiler Design</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>Artificial Intelligence</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>Soft Skills</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>Python Programming Lab</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>Data Communication & Computer Networks Lab</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0%</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <h2>Daily Attendance</h2>
+
+            <div class="time-table" style="padding-top: 30px;">
+                <div class="nav-table">
+                    <button class="main-button">Previous</button>
+                    <button class="main-button" style="padding: 12px 40px;">
+                        Thursday 13-09-2024
+                    </button>
+                    <button class="main-button" disabled>Next</button>
+                </div>
+                
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th>Time</th>
+                            <th>Subject</th>
+                            <th>Batches</th>
+                            <th>Faculty</th>
+                            <th>Attendance</th>
+                        </tr>
+                        <tr>
+                            <td>0900 - 1040</td>
+                            <td>Data Warehouse & Data Mining</td>
+                            <td>Theory</td>
+                            <td>Dr. A. Mary Sowjanya</td>
+                            <td style="color: green">Present</td>
+                        </tr>
+                        <tr>
+                            <td>1040 - 1220</td>
+                            <td>Soft Skills</td>
+                            <td>Theory</td>
+                            <td>Prof. A. Rama Naga Hanuman</td>
+                            <td style="color: red">Absent</td>
+                        </tr>
+                        <tr>
+                            <td>1330 - 1510</td>
+                            <td>Python Programming</td>
+                            <td>Lab - Batch 8</td>
+                            <td>Mr. P. Samba Siva Raju</td>
+                            <td style="color: green">Present</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            
+        </div>
+
+    </body>
+</html>

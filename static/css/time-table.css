@@ -32,3 +32,16 @@
     padding: 10px;
     text-align: center;
 }
+
+.total-attendance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    border-radius: 6px;
+    border: 2px solid rgb(64, 239, 64);
+    box-shadow: 2px 2px 4px 6px rgba(64, 239, 64, 0.2);
+    margin-left: 500px;
+    margin-right: 500px;
+}
