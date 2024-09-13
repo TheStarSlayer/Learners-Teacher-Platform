@@ -16,7 +16,7 @@ exam dates, assignments due, mid marks and so on...
 * ~~Take attendance~~
 * ~~File attendance~~
 * ~~Post on Class Wall~~
-* Post mid-term marks
+* Post marks
 * View timetable
 * View class statistics
 * View attendance
