@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>View Statistics</title>
+        <style>
+            body {
+                display: grid;
+                grid-template-rows: 1fr 7fr;
+                background-image: url(../static/img/sakura.webp);
+                background-repeat: repeat;
+            }
+
+            .statistics {
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+            }
+
+            .select-class {
+                display: flex;
+                flex-direction: row;
+                column-gap: 30px;
+                align-items: center;
+            }
+
+            .select-class select {
+                padding: 6px;
+                border-radius: 4px;
+            }
+
+            .select-metric {
+                display: flex;
+                flex-direction: row;
+                column-gap: 50px;
+            }
+        </style>
+        <link rel="stylesheet" href="../static/css/header.css">
+        <link rel="stylesheet" href="../static/css/main.css">
+        <link rel="stylesheet" href="../static/css/time-table.css">
+    </head>
+
+    <body>
+        <div class="header">
+
+            <div class="logo-container">
+                <img class="logo" src="../static/img/Header.png" alt="AULTP Logo">
+            </div>
+            
+            <span class="heading">
+                Learner-Teacher-Platform Portal
+            </span>
+
+            <div class="links">
+                <form action="../login.html">
+                    <input type="submit" value="Logout" class="header-button">
+                </form>
+
+                <form target="_blank" action="https://andhrauniversity.edu.in">
+                    <input type="submit" value="A.U. Website" class="header-button">
+                </form>
+                
+                <form target="_blank" action="https://results.andhrauniversity.edu.in/">
+                    <input type="submit" value="EMS Website" class="header-button">
+                </form>
+
+                <button class="header-button" onClick="darkMode()">
+                    Dark Mode
+                </button>
+
+            </div>
+        </div>
+
+        <div class="main">
+
+            <div class="navbar">
+                <a href="welcome-teacher.html"><button class="nav-link">
+                    Dashboard
+                </button></a>
+            </div>
+
+            <br />
+            <h1>Class Summary</h1>
+            <br />
+
+            <div class="statistics">
+                <div class="select-class">
+                    <label for="class">Select Class:</label>
+                    <select name="class" id="class" onblur="activateMetrics();">
+                        <option value="">Select Class</option>
+                        <option value="CSE3-IV">CSE3-IV</option>
+                        <option value="CSE4-III">CSE4-III</option>
+                        <option value="CSE4-II">CSE4-II</option>
+                        <option value="CSE7-I">CSE7-I</option>
+                    </select>
+                </div>
+
+                <div class="select-metric" id="metrics" style="display: none;">
+                    <button class="main-button" onclick="showAttendance();">
+                        Attendance
+                    </button>
+                    <button class="main-button" onclick="showMarks();">
+                        Marks
+                    </button>
+                </div>
+
+                <script>
+                    function activateMetrics() {
+                        if (document.getElementById('class').value != '')
+                            document.getElementById('metrics').style.display = 'block';
+                    }
+                </script>
+
+                <div class="attendance" id="attendance" style="display: none;">
+                    <div class="total-attendance" style="
+                        margin-left: 400px; margin-right: 400px;">
+                        <h2>Class Average Total Attendance</h2>
+                        <h2 style="color: green">85%</h2>
+                    </div>
+        
+                    <div class="time-table" style="padding-bottom: 40px;">
+                        <div class="table">
+                            <table>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Hours Attended</th>
+                                    <th>Total Hours</th>
+                                    <th>Average Attendance Percentage</th>
+                                </tr>
+                                <tr>
+                                    <td>Data Warehouse & Data Mining</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td>Python Programming</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td>Data Communication & Computer Networks</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0%</td>
+                                </tr>
+                                <tr>
+                                    <td>Compiler Design</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0%</td>
+                                </tr>
+                                <tr>
+                                    <td>Artificial Intelligence</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0%</td>
+                                </tr>
+                                <tr>
+                                    <td>Soft Skills</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0%</td>
+                                </tr>
+                                <tr>
+                                    <td>Python Programming Lab</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0%</td>
+                                </tr>
+                                <tr>
+                                    <td>Data Communication & Computer Networks Lab</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0%</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="marks" id="marks" style="display: none;">
+                    <div class="time-table" style="padding-top: 30px;">
+                        <h2 style="margin-top: -20px; padding-bottom: 20px;">Total Marks</h2>
+                        <div class="table">
+                            <table>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Mid (Final) -- Average</th>
+                                    <th>Total Average Internal Marks</th>
+                                </tr>
+                                <tr>
+                                    <td>Data Warehouse & Data Mining</td>
+                                    <td>20</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>Python Programming</td>
+                                    <td>19</td>
+                                    <td>29</td>
+                                </tr>
+                                <tr>
+                                    <td>Data Communication & Computer Networks</td>
+                                    <td>18</td>
+                                    <td>26</td>
+                                </tr>
+                                <tr>
+                                    <td>Compiler Design</td>
+                                    <td>18</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>Artificial Intelligence</td>
+                                    <td>18</td>
+                                    <td>28</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function showAttendance() {
+                    document.getElementById('marks').style.display = 'none';
+                    document.getElementById('attendance').style.display = 'block';
+                }
+
+                function showMarks() {
+                    document.getElementById('attendance').style.display = 'none';
+                    document.getElementById('marks').style.display = 'block';
+                }
+            </script>
+        </div>
+
+    </body>
+</html>

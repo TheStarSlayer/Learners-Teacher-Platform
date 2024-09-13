@@ -18,9 +18,11 @@ exam dates, assignments due, mid marks and so on...
 * ~~Post on Class Wall~~
 * ~~Post marks~~
 * ~~View timetable~~
-* View class statistics
+* ~~View class statistics~~
 * ~~View attendance~~
 * ~~View marks~~
 * ~~Create Class Wall~~
+
+### Done with frontend template pages
 
 # In development for Smart India Hackathon
