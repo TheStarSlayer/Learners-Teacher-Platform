@@ -19,7 +19,7 @@ exam dates, assignments due, mid marks and so on...
 * ~~Post marks~~
 * ~~View timetable~~
 * View class statistics
-* View attendance
+* ~~View attendance~~
 * View marks
 * ~~Create Class Wall~~
 
