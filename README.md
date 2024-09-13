@@ -21,6 +21,6 @@ exam dates, assignments due, mid marks and so on...
 * View class statistics
 * View attendance
 * View marks
-* Create Class Wall
+* ~~Create Class Wall~~
 
 # In development for Smart India Hackathon
