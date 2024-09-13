@@ -20,7 +20,7 @@ exam dates, assignments due, mid marks and so on...
 * ~~View timetable~~
 * View class statistics
 * ~~View attendance~~
-* View marks
+* ~~View marks~~
 * ~~Create Class Wall~~
 
 # In development for Smart India Hackathon
