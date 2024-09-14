@@ -3,14 +3,7 @@
 <html>
     <head>
         <title>File attendance</title>
-        <style>
-            body {
-                display: grid;
-                grid-template-rows: 1fr 7fr;
-                background-image: url(../static/img/sakura.webp);
-                background-repeat: repeat;
-            }
-        </style>
+
         <link rel="stylesheet" href="../static/css/header.css">
         <link rel="stylesheet" href="../static/css/main.css">
         <link rel="stylesheet" href="../static/css/attendance.css">
@@ -29,7 +22,7 @@
 
             <div class="links">
                 <form action="../login.html">
-                    <input type="submit" value="Logout" class="header-button">
+                    <input type="submit" value="Logout" class="header-button-logout">
                 </form>
 
                 <form target="_blank" action="https://andhrauniversity.edu.in">
@@ -117,18 +110,18 @@
                     <div id="facial-reg" style="display: none;">
                         <div class="attendance-inputs">
                             <label for="face-rec">Facial recognition: </label>
-                            <video id="face-rec" name="face-rec" autoplay></video>
+                            <video id="pic" autoplay></video>
 
                             <script>
                                 navigator.mediaDevices
-                                .getUserMedia({ video: true })
-                                .then((localMediaStream) => {
-                                const video = document.querySelector("video");
-                                video.srcObject = localMediaStream;
-                                })
-                                .catch((error) => {
-                                console.log("Rejected!", error);
-                                });
+                                    .getUserMedia({ video: true, audio: false })
+                                    .then((localMediaStream) => {
+                                        const video = document.getElementById("pic");
+                                        video.srcObject = localMediaStream;
+                                    })
+                                    .catch((error) => {
+                                        console.log("Rejected!", error);
+                                    });
                             </script>
                         </div>
                     </div>

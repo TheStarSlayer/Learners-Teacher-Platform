@@ -1,0 +1,23 @@
+.statistics {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.select-class {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.select-class select {
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.select-metric {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+}

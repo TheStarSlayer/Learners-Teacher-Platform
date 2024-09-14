@@ -1,3 +1,10 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/sakura.webp);
+    background-repeat: repeat;
+}
+
 .header {
     display: flex;
     flex-direction: row;
@@ -13,14 +20,12 @@
     padding-right: 16px;
     width: 100%;
    
-    
     z-index: 100;
 }
 
 .logo {
-    width: 300px;
-    position: relative;
-    top: -8px;
+    width: 200px;
+    height: 100px;    
 }
 
 .heading {
@@ -35,8 +40,8 @@
     flex-direction: row;
 }
 
-.header-button {
-    padding: 37px 15px;
+.header-button, .header-button-logout {
+    padding: 44px 12px;
     background-color: whitesmoke;
     border: none;
     
@@ -44,7 +49,12 @@
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.header-button:hover {
+.header-button-logout {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.header-button:hover, .header-button-logout:hover {
     background-color: #333;
     color: white;
 }

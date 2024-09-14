@@ -9,6 +9,7 @@
     padding: 20px;
     border-radius: 4px;
     border: 4px inset white;
+    padding-bottom: 40px;
 }
 
 .navbar {
@@ -19,7 +20,7 @@
 }
 
 .nav-link {
-    background-color: aliceblue;
+    background-color: whitesmoke;
     border: none;
     padding: 12px;
     border-top-left-radius: 30px;
